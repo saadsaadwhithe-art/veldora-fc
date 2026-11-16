@@ -1,0 +1,683 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veldora FC | متجر أطقم وقمصان كرة القدم العالمية</title>
+    <meta name="description" content="متجر Veldora FC لجميع قمصان وأطقم كرة القدم للمنتخبات والأندية العالمية بأثمنة مناسبة وتوصيل لجميع المدن.">
+    <meta name="keywords" content="Veldora FC, veldora-fc, قمصان كرة القدم, أطقم رياضية, مبابي, ميسي, رونالدو, حكيمي, يامال, فينيسيوس">
+    <meta name="robots" content="index, follow">
+
+    <style>
+        :root {
+            --bg-dark: #090d16;
+            --card-bg: #131b2e;
+            --gold: #f59e0b;
+            --green: #10b981;
+            --red: #ef4444;
+            --text-light: #f8fafc;
+            --text-gray: #94a3b8;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-light);
+            /* خلفية تدل على تنوع ألوان وأطقم كرة القدم */
+            background-image: 
+                radial-gradient(circle at 15% 20%, rgba(245, 158, 11, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 85% 30%, rgba(16, 185, 129, 0.12) 0%, transparent 40%),
+                radial-gradient(circle at 50% 80%, rgba(59, 130, 246, 0.12) 0%, transparent 50%),
+                repeating-linear-gradient(45deg, rgba(255,255,255,0.015) 0px, rgba(255,255,255,0.015) 2px, transparent 2px, transparent 12px);
+            min-height: 100vh;
+        }
+
+        /* الهيدر */
+        header {
+            background: rgba(9, 13, 22, 0.92);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--gold);
+            padding: 18px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 900;
+            color: var(--gold);
+            letter-spacing: 1px;
+        }
+
+        .logo span { color: #fff; }
+
+        .nav-links a {
+            color: var(--text-light);
+            text-decoration: none;
+            margin-right: 20px;
+            font-weight: 600;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover { color: var(--gold); }
+
+        /* القسم الترحيبي */
+        .hero {
+            text-align: center;
+            padding: 60px 20px 40px;
+            background: linear-gradient(to bottom, rgba(19, 27, 46, 0.8), transparent);
+        }
+
+        .hero h1 {
+            font-size: 2.6rem;
+            color: var(--gold);
+            margin-bottom: 12px;
+        }
+
+        .hero p {
+            color: var(--text-gray);
+            max-width: 680px;
+            margin: 0 auto 20px;
+            font-size: 1.1rem;
+        }
+
+        .delivery-banner {
+            display: inline-block;
+            background: rgba(245, 158, 11, 0.15);
+            border: 1px solid var(--gold);
+            color: #fde68a;
+            padding: 10px 22px;
+            border-radius: 30px;
+            font-size: 0.95rem;
+            font-weight: bold;
+        }
+
+        /* الأقسام */
+        .container {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 0 20px;
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 40px 0 25px;
+            border-right: 5px solid var(--gold);
+            padding-right: 15px;
+        }
+
+        .section-header h2 {
+            font-size: 1.8rem;
+            color: #fff;
+        }
+
+        /* شبكة البطاقات */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 22px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border: 1px solid #1e293b;
+            border-radius: 14px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            border-color: var(--gold);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-img-box {
+            background: #f1f5f9;
+            height: 240px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+        }
+
+        .card-img-box img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .card-img-box img {
+            transform: scale(1.06);
+        }
+
+        .card-info {
+            padding: 16px;
+            text-align: center;
+        }
+
+        .card-team {
+            font-size: 0.85rem;
+            color: var(--gold);
+            font-weight: bold;
+            margin-bottom: 4px;
+        }
+
+        .card-title {
+            font-size: 1.15rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .card-price {
+            font-size: 1.25rem;
+            font-weight: 900;
+            color: var(--green);
+        }
+
+        .click-hint {
+            display: block;
+            margin-top: 10px;
+            font-size: 0.8rem;
+            color: var(--text-gray);
+        }
+
+        /* الشاشة المكبرة (Modal) */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.88);
+            backdrop-filter: blur(8px);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            transition: background 0.4s ease;
+        }
+
+        .modal-box {
+            width: 100%;
+            max-width: 820px;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.8);
+            border: 2px solid rgba(255,255,255,0.25);
+            position: relative;
+            animation: popIn 0.3s ease;
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.9); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        /* خلفية العلم أو النادي داخل الشاشة المكبرة */
+        .modal-themed-bg {
+            padding: 30px;
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 25px;
+            align-items: center;
+            position: relative;
+        }
+
+        .modal-themed-bg::before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: rgba(9, 13, 22, 0.78);
+            z-index: 0;
+        }
+
+        .modal-content-layer {
+            position: relative;
+            z-index: 1;
+        }
+
+        .close-btn {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            z-index: 10;
+            background: rgba(0,0,0,0.6);
+            color: #fff;
+            border: 1px solid #fff;
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            font-size: 1.2rem;
+            cursor: pointer;
+        }
+
+        .modal-jersey-img {
+            width: 100%;
+            max-height: 320px;
+            object-fit: contain;
+            background: #fff;
+            border-radius: 14px;
+            padding: 10px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .modal-details h3 {
+            font-size: 1.8rem;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+
+        .modal-badge {
+            display: inline-block;
+            background: var(--gold);
+            color: #000;
+            font-weight: bold;
+            padding: 3px 12px;
+            border-radius: 12px;
+            font-size: 0.85rem;
+            margin-bottom: 12px;
+        }
+
+        .modal-desc {
+            color: #e2e8f0;
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .form-row {
+            margin-bottom: 12px;
+        }
+
+        .form-row label {
+            display: block;
+            font-size: 0.85rem;
+            color: #cbd5e1;
+            margin-bottom: 4px;
+        }
+
+        .form-row select {
+            width: 100%;
+            padding: 9px;
+            border-radius: 8px;
+            border: 1px solid #475569;
+            background: #0f172a;
+            color: #fff;
+            font-size: 0.95rem;
+        }
+
+        .price-summary {
+            background: rgba(0, 0, 0, 0.5);
+            padding: 12px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-right: 4px solid var(--green);
+        }
+
+        .price-summary div {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 4px;
+            font-size: 0.95rem;
+        }
+
+        .total-line {
+            font-size: 1.2rem !important;
+            font-weight: 900;
+            color: var(--gold);
+            border-top: 1px solid #334155;
+            padding-top: 6px;
+            margin-top: 6px;
+        }
+
+        .action-buttons {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .btn-wa {
+            background: #25D366;
+            color: #000;
+            font-weight: 800;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        .btn-gmail {
+            background: #EA4335;
+            color: #fff;
+            font-weight: 800;
+            border: none;
+            padding: 12px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 700px) {
+            .modal-themed-bg { grid-template-columns: 1fr; }
+            .modal-jersey-img { max-height: 220px; }
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px;
+            background: #05080f;
+            border-top: 1px solid #1e293b;
+            margin-top: 60px;
+            color: var(--text-gray);
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="logo">VELDORA <span>FC</span></div>
+        <nav class="nav-links">
+            <a href="#countries">قمصان المنتخبات</a>
+            <a href="#clubs">قمصان الأندية</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>عالم أطقم وقمصان كرة القدم</h1>
+        <p>تشكيلة شاملة لأشهر نجوم المنتخبات والأندية العالمية بجودة عالية وأثمنة في المتناول للجميع.</p>
+        <div class="delivery-banner">
+            🚚 أثمنة القمصان من 50 إلى 70 درهم | التوصيل للمدن البعيدة بـ 50 درهم فقط
+        </div>
+    </section>
+
+    <main class="container">
+        <!-- قسم قمصان المنتخبات -->
+        <div class="section-header" id="countries">
+            <h2>🌍 قسم قمصان المنتخبات الوطنية</h2>
+        </div>
+        <div class="grid" id="countries-grid"></div>
+
+        <!-- قسم قمصان الأندية -->
+        <div class="section-header" id="clubs">
+            <h2>🏆 قسم قمصان الأندية العالمية</h2>
+        </div>
+        <div class="grid" id="clubs-grid"></div>
+    </main>
+
+    <!-- الشاشة المكبرة عند الضغط على أي قميص -->
+    <div class="modal-overlay" id="jerseyModal" onclick="closeModal(event)">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="forceClose()">✕</button>
+            <div class="modal-themed-bg" id="modalThemeBg">
+                <div class="modal-content-layer">
+                    <img id="mImg" src="" alt="قميص" class="modal-jersey-img">
+                </div>
+                <div class="modal-content-layer modal-details">
+                    <span class="modal-badge" id="mTeam"></span>
+                    <h3 id="mTitle"></h3>
+                    <p class="modal-desc" id="mDesc"></p>
+
+                    <div class="form-row">
+                        <label>اختر المقاس المناسب:</label>
+                        <select id="mSize">
+                            <option value="S">S (صغير)</option>
+                            <option value="M" selected>M (متوسط)</option>
+                            <option value="L">L (كبير)</option>
+                            <option value="XL">XL (كبير جداً)</option>
+                        </select>
+                    </div>
+
+                    <div class="form-row">
+                        <label>اختر موقع التوصيل:</label>
+                        <select id="mDelivery" onchange="updateTotal()">
+                            <option value="0">استلام محلي / مدينة قريبة (0 درهم)</option>
+                            <option value="50" selected>توصيل لمدينة بعيدة (+50 درهم)</option>
+                        </select>
+                    </div>
+
+                    <div class="price-summary">
+                        <div><span>ثمن القميص:</span> <span id="mBasePrice">0 درهم</span></div>
+                        <div><span>تكلفة التوصيل:</span> <span id="mShipPrice">50 درهم</span></div>
+                        <div class="total-line"><span>المجموع النهائي:</span> <span id="mTotalPrice">0 درهم</span></div>
+                    </div>
+
+                    <div class="action-buttons">
+                        <button class="btn-wa" onclick="orderViaWhatsApp()">📱 اطلب عبر واتساب</button>
+                        <button class="btn-gmail" onclick="orderViaGmail()">✉️ اطلب عبر Gmail</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>جميع الحقوق محفوظة &copy; 2026 متجر <strong>Veldora FC</strong> | جميع أنواع ملابس كرة القدم</p>
+    </footer>
+
+    <script>
+        // ضع رقم واتساب الخاص بك وبريدك الإلكتروني هنا
+        const MY_WHATSAPP = "212600000000"; // استبدل الأصفار برقمك المغربي
+        const MY_GMAIL = "yourname@gmail.com"; // استبدل هذا ببريدك في Gmail
+
+        // قاعدة بيانات القمصان مع خلفيات الأعلام والأندية
+        const jerseys = [
+            // المنتخبات
+            {
+                id: 1,
+                category: "country",
+                name: "قميص كيليان مبابي #10",
+                team: "منتخب فرنسا 🇫🇷",
+                price: 65,
+                img: "mbappe.jpg",
+                desc: "القميص الأزرق الرسمي للمنتخب الفرنسي بطباعة اسم ورقم كيليان مبابي 10 بجودة ممتازة.",
+                // علم فرنسا كخلفية
+                themeBg: "linear-gradient(90deg, #002395 0%, #002395 33%, #ffffff 33%, #ffffff 66%, #ed2939 66%, #ed2939 100%)"
+            },
+            {
+                id: 2,
+                category: "country",
+                name: "قميص نيمار جونيور #10",
+                team: "منتخب البرازيل 🇧🇷",
+                price: 60,
+                img: "neymar.jpg",
+                desc: "قميص السيليساو البرازيلي الأصفر التاريخي باسم ورقم نيمار 10.",
+                // علم البرازيل كخلفية
+                themeBg: "radial-gradient(circle, #002776 20%, #ffdf00 22%, #ffdf00 45%, #009c3b 47%)"
+            },
+            {
+                id: 3,
+                category: "country",
+                name: "قميص ليونيل ميسي #10",
+                team: "منتخب الأرجنتين 🇦🇷",
+                price: 70,
+                img: "messi.jpg",
+                desc: "قميص أبطال العالم الأرجنتين بخطوطه السماوية والبيضاء واسم الأسطورة ميسي.",
+                // علم الأرجنتين كخلفية
+                themeBg: "linear-gradient(180deg, #74acdf 0%, #74acdf 33%, #ffffff 33%, #ffffff 66%, #74acdf 66%, #74acdf 100%)"
+            },
+            {
+                id: 4,
+                category: "country",
+                name: "قميص كريستيانو رونالدو #7",
+                team: "منتخب البرتغال 🇵🇹",
+                price: 70,
+                img: "ronaldo.jpg",
+                desc: "القميص العنابي والأخضر للمنتخب البرتغالي برقم 7 الخاص بكريستيانو رونالدو.",
+                // علم البرتغال كخلفية
+                themeBg: "linear-gradient(90deg, #006600 0%, #006600 40%, #ff0000 40%, #ff0000 100%)"
+            },
+
+            // الأندية
+            {
+                id: 5,
+                category: "club",
+                name: "قميص لامين يامال #19",
+                team: "نادي برشلونة 🔵🔴",
+                price: 65,
+                img: "ibra.jpg", // يمكنك تغيير الصورة لصورة يامال لاحقاً
+                desc: "قميص البلوغرانا لنادي برشلونة لنجم الفريق الصاعد لامين يامال.",
+                // ألوان برشلونة كخلفية
+                themeBg: "repeating-linear-gradient(90deg, #004d98 0px, #004d98 60px, #a50044 60px, #a50044 120px)"
+            },
+            {
+                id: 6,
+                category: "club",
+                name: "قميص فينيسيوس جونيور #7",
+                team: "نادي ريال مدريد 👑⚪",
+                price: 65,
+                img: "haaland.jpg", // يمكنك تغيير الصورة لصورة فينيسيوس لاحقاً
+                desc: "القميص الملكي لنادي ريال مدريد باسم النجم البرازيلي فينيسيوس جونيور.",
+                // ألوان ريال مدريد الملكية
+                themeBg: "linear-gradient(135deg, #ffffff 0%, #e2e8f0 50%, #feba12 52%, #00529f 100%)"
+            },
+            {
+                id: 7,
+                category: "club",
+                name: "قميص أشرف حكيمي #2",
+                team: "باريس سان جيرمان 🔵🔴",
+                price: 60,
+                img: "hakimi.jpg",
+                desc: "قميص النادي الباريسي بالخط الأحمر والأبيض باسم النجم المغربي أشرف حكيمي.",
+                // ألوان باريس سان جيرمان
+                themeBg: "linear-gradient(90deg, #004170 0%, #004170 42%, #ffffff 42%, #ffffff 45%, #da291c 45%, #da291c 55%, #ffffff 55%, #ffffff 58%, #004170 58%, #004170 100%)"
+            },
+            {
+                id: 8,
+                category: "club",
+                name: "قميص إيرلينغ هالاند #9",
+                team: "مانشستر سيتي 🩵⚪",
+                price: 55,
+                img: "haaland.jpg",
+                desc: "القميص السماوي لبطل إنجلترا مانشستر سيتي باسم الهداف هالاند.",
+                // ألوان مانشستر سيتي
+                themeBg: "linear-gradient(135deg, #6cabdd 0%, #1c2c5b 100%)"
+            },
+            {
+                id: 9,
+                category: "club",
+                name: "قميص واين روني #10 (كلاسيك)",
+                team: "مانشستر يونايتد 🔴⚫",
+                price: 50,
+                img: "rooney.jpg",
+                desc: "قميص الشياطين الحمر الكلاسيكي للأسطورة واين روني بسعر خاص.",
+                // ألوان مانشستر يونايتد
+                themeBg: "linear-gradient(135deg, #da291c 0%, #fbe122 50%, #000000 100%)"
+            },
+            {
+                id: 10,
+                category: "club",
+                name: "قميص زلاتان إبراهيموفيتش #9",
+                team: "برشلونة كلاسيك 🔵🔴",
+                price: 55,
+                img: "ibra.jpg",
+                desc: "نسخة كلاسيكية مميزة لقميص برشلونة باسم النجم زلاتان إبراهيموفيتش.",
+                themeBg: "repeating-linear-gradient(90deg, #004d98 0px, #004d98 60px, #a50044 60px, #a50044 120px)"
+            }
+        ];
+
+        let currentJersey = null;
+
+        // عرض البطاقات في الأقسام
+        function renderJerseys() {
+            const countriesGrid = document.getElementById("countries-grid");
+            const clubsGrid = document.getElementById("clubs-grid");
+
+            jerseys.forEach(item => {
+                const cardHTML = `
+                    <div class="card" onclick="openModal(${item.id})">
+                        <div class="card-img-box">
+                            <img src="${item.img}" alt="${item.name}">
+                        </div>
+                        <div class="card-info">
+                            <div class="card-team">${item.team}</div>
+                            <div class="card-title">${item.name}</div>
+                            <div class="card-price">${item.price} درهم</div>
+                            <span class="click-hint">👆 اضغط لعرض القميص والطلب</span>
+                        </div>
+                    </div>
+                `;
+                if (item.category === "country") {
+                    countriesGrid.innerHTML += cardHTML;
+                } else {
+                    clubsGrid.innerHTML += cardHTML;
+                }
+            });
+        }
+
+        // فتح الشاشة المكبرة بخلفية الدولة أو النادي
+        function openModal(id) {
+            currentJersey = jerseys.find(j => j.id === id);
+            if (!currentJersey) return;
+
+            document.getElementById("mImg").src = currentJersey.img;
+            document.getElementById("mTeam").innerText = currentJersey.team;
+            document.getElementById("mTitle").innerText = currentJersey.name;
+            document.getElementById("mDesc").innerText = currentJersey.desc;
+            
+            // تطبيق خلفية العلم أو النادي
+            document.getElementById("modalThemeBg").style.background = currentJersey.themeBg;
+
+            updateTotal();
+            document.getElementById("jerseyModal").style.display = "flex";
+        }
+
+        // تحديث السعر الإجمالي مع التوصيل
+        function updateTotal() {
+            if (!currentJersey) return;
+            const deliveryCost = parseInt(document.getElementById("mDelivery").value);
+            const total = currentJersey.price + deliveryCost;
+
+            document.getElementById("mBasePrice").innerText = currentJersey.price + " درهم";
+            document.getElementById("mShipPrice").innerText = deliveryCost + " درهم";
+            document.getElementById("mTotalPrice").innerText = total + " درهم";
+        }
+
+        function forceClose() {
+            document.getElementById("jerseyModal").style.display = "none";
+        }
+
+        function closeModal(e) {
+            if (e.target.id === "jerseyModal") forceClose();
+        }
+
+        // الطلب عبر واتساب
+        function orderViaWhatsApp() {
+            const size = document.getElementById("mSize").value;
+            const delivery = parseInt(document.getElementById("mDelivery").value);
+            const total = currentJersey.price + delivery;
+
+            const msg = `مرحباً متجر Veldora FC 👋\nأريد طلب هذا القميص:\n- المنتج: ${currentJersey.name} (${currentJersey.team})\n- المقاس: ${size}\n- ثمن القميص: ${currentJersey.price} درهم\n- التوصيل: ${delivery} درهم\n- المجموع النهائي: ${total} درهم`;
+            
+            window.open(`https://wa.me/${MY_WHATSAPP}?text=${encodeURIComponent(msg)}`, "_blank");
+        }
+
+        // الطلب عبر جيميل
+        function orderViaGmail() {
+            const size = document.getElementById("mSize").value;
+            const delivery = parseInt(document.getElementById("mDelivery").value);
+            const total = currentJersey.price + delivery;
+
+            const subject = `طلب جديد من Veldora FC: ${currentJersey.name}`;
+            const body = `مرحباً،\n\nأرغب في طلب القميص التالي:\n- المنتج: ${currentJersey.name} (${currentJersey.team})\n- المقاس: ${size}\n- ثمن القميص: ${currentJersey.price} درهم\n- التوصيل: ${delivery} درهم\n- المجموع: ${total} درهم\n\nالاسم الكامل:\nالمدينة والعنوان:\nرقم الهاتف:`;
+
+            window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${MY_GMAIL}&su=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`, "_blank");
+        }
+
+        renderJerseys();
+    </script>
+</body>
+</html>
