@@ -142,13 +142,11 @@
             align-items: center;
             position: relative;
         }
+        /* تم إصلاح هذه الطبقة لإظهار الألوان والشعارات بوضوح 100% */
         .bg-vibrant-layer {
             position: absolute;
             inset: 0;
-            background-size: cover !important;
-            background-position: center !important;
-            background-repeat: no-repeat !important;
-            filter: saturate(1.7) contrast(1.15);
+            filter: saturate(1.75) contrast(1.15);
             z-index: 0;
         }
         .modal-layer { position: relative; z-index: 1; }
@@ -258,7 +256,7 @@
     <main class="container">
         <h2 class="section-title" id="countries">🌍 قسم قمصان المنتخبات الوطنية</h2>
         <div class="grid">
-            <div class="card" onclick="openShirt('قميص كيليان مبابي #10', 'منتخب فرنسا 🇫🇷', 65, 'image_ec22e2ac.jpg', 'p-mbappe.png', 'القميص الأزرق الرسمي للمنتخب الفرنسي بطباعة اسم ورقم كيليان مبابي 10.', 'url(https://flagcdn.com/w1280/fr.png)')">
+            <div class="card" onclick="openShirt('قميص كيليان مبابي #10', 'منتخب فرنسا 🇫🇷', 65, 'image_ec22e2ac.jpg', 'p-mbappe.png', 'القميص الأزرق الرسمي للمنتخب الفرنسي بطباعة اسم ورقم كيليان مبابي 10.', 'flag', 'https://flagcdn.com/w1280/fr.png')">
                 <div class="card-img"><img src="image_ec22e2ac.jpg" alt="مبابي"></div>
                 <div class="card-body">
                     <span class="team-tag">منتخب فرنسا 🇫🇷</span>
@@ -268,7 +266,7 @@
                 </div>
             </div>
 
-            <div class="card" onclick="openShirt('قميص نيمار جونيور #10', 'منتخب البرازيل 🇧🇷', 60, 'image_239d5c62.jpg', 'p-neymar.png', 'قميص السيليساو البرازيلي الأصفر التاريخي باسم ورقم نيمار 10.', 'url(https://flagcdn.com/w1280/br.png)')">
+            <div class="card" onclick="openShirt('قميص نيمار جونيور #10', 'منتخب البرازيل 🇧🇷', 60, 'image_239d5c62.jpg', 'p-neymar.png', 'قميص السيليساو البرازيلي الأصفر التاريخي باسم ورقم نيمار 10.', 'flag', 'https://flagcdn.com/w1280/br.png')">
                 <div class="card-img"><img src="image_239d5c62.jpg" alt="نيمار"></div>
                 <div class="card-body">
                     <span class="team-tag">منتخب البرازيل 🇧🇷</span>
@@ -278,7 +276,7 @@
                 </div>
             </div>
 
-            <div class="card" onclick="openShirt('قميص ليونيل ميسي #10', 'منتخب الأرجنتين 🇦🇷', 70, 'image_af0509a8.jpg', 'p-messi.png', 'قميص أبطال العالم الأرجنتين بخطوطه السماوية والبيضاء واسم الأسطورة ميسي.', 'url(https://flagcdn.com/w1280/ar.png)')">
+            <div class="card" onclick="openShirt('قميص ليونيل ميسي #10', 'منتخب الأرجنتين 🇦🇷', 70, 'image_af0509a8.jpg', 'p-messi.png', 'قميص أبطال العالم الأرجنتين بخطوطه السماوية والبيضاء واسم الأسطورة ميسي.', 'flag', 'https://flagcdn.com/w1280/ar.png')">
                 <div class="card-img"><img src="image_af0509a8.jpg" alt="ميسي"></div>
                 <div class="card-body">
                     <span class="team-tag">منتخب الأرجنتين 🇦🇷</span>
@@ -288,7 +286,7 @@
                 </div>
             </div>
 
-            <div class="card" onclick="openShirt('قميص كريستيانو رونالدو #7', 'منتخب البرتغال 🇵🇹', 70, 'image_2bb70508.jpg', 'p-ronaldo.png', 'القميص العنابي والأخضر للمنتخب البرتغالي برقم 7 الخاص بكريستيانو رونالدو.', 'url(https://flagcdn.com/w1280/pt.png)')">
+            <div class="card" onclick="openShirt('قميص كريستيانو رونالدو #7', 'منتخب البرتغال 🇵🇹', 70, 'image_2bb70508.jpg', 'p-ronaldo.png', 'القميص العنابي والأخضر للمنتخب البرتغالي برقم 7 الخاص بكريستيانو رونالدو.', 'flag', 'https://flagcdn.com/w1280/pt.png')">
                 <div class="card-img"><img src="image_2bb70508.jpg" alt="رونالدو"></div>
                 <div class="card-body">
                     <span class="team-tag">منتخب البرتغال 🇵🇹</span>
@@ -301,7 +299,7 @@
 
         <h2 class="section-title" id="clubs">🏆 قسم قمصان الأندية العالمية</h2>
         <div class="grid">
-            <div class="card" onclick="openShirt('قميص زلاتان إبراهيموفيتش #9', 'نادي برشلونة 🔵🔴', 65, 'image_7db5a9a0.jpg', 'p-ibra.png', 'قميص البلوغرانا الكلاسيكي لنادي برشلونة باسم النجم زلاتان إبراهيموفيتش.', 'url(https://a.espncdn.com/i/teamlogos/soccer/500/83.png), repeating-linear-gradient(90deg, #004d98 0px, #004d98 80px, #a50044 80px, #a50044 160px)')">
+            <div class="card" onclick="openShirt('قميص زلاتان إبراهيموفيتش #9', 'نادي برشلونة 🔵🔴', 65, 'image_7db5a9a0.jpg', 'p-ibra.png', 'قميص البلوغرانا الكلاسيكي لنادي برشلونة باسم النجم زلاتان إبراهيموفيتش.', 'club', 'https://a.espncdn.com/i/teamlogos/soccer/500/83.png', 'repeating-linear-gradient(90deg, #004d98 0px, #004d98 80px, #a50044 80px, #a50044 160px)')">
                 <div class="card-img"><img src="image_7db5a9a0.jpg" alt="إبراهيموفيتش"></div>
                 <div class="card-body">
                     <span class="team-tag">نادي برشلونة 🔵🔴</span>
@@ -311,7 +309,7 @@
                 </div>
             </div>
 
-            <div class="card" onclick="openShirt('قميص أشرف حكيمي #2', 'باريس سان جيرمان 🔵🔴', 60, 'image_96461500.jpg', 'p-hakimi.png', 'قميص النادي الباريسي بالخط الأحمر والأبيض باسم النجم المغربي أشرف حكيمي.', 'url(https://a.espncdn.com/i/teamlogos/soccer/500/160.png), linear-gradient(90deg, #004170 0%, #004170 42%, #ffffff 42%, #ffffff 45%, #da291c 45%, #da291c 55%, #ffffff 55%, #ffffff 58%, #004170 58%, #004170 100%)')">
+            <div class="card" onclick="openShirt('قميص أشرف حكيمي #2', 'باريس سان جيرمان 🔵🔴', 60, 'image_96461500.jpg', 'p-hakimi.png', 'قميص النادي الباريسي بالخط الأحمر والأبيض باسم النجم المغربي أشرف حكيمي.', 'club', 'https://a.espncdn.com/i/teamlogos/soccer/500/160.png', 'linear-gradient(90deg, #004170 0%, #004170 42%, #ffffff 42%, #ffffff 45%, #da291c 45%, #da291c 55%, #ffffff 55%, #ffffff 58%, #004170 58%, #004170 100%)')">
                 <div class="card-img"><img src="image_96461500.jpg" alt="حكيمي"></div>
                 <div class="card-body">
                     <span class="team-tag">باريس سان جيرمان 🔵🔴</span>
@@ -321,7 +319,7 @@
                 </div>
             </div>
 
-            <div class="card" onclick="openShirt('قميص إيرلينغ هالاند #9', 'مانشستر سيتي 🩵⚪', 55, 'image_cd1d9c29.jpg', 'p-haaland.png', 'القميص السماوي لبطل إنجلترا مانشستر سيتي باسم الهداف هالاند.', 'url(https://a.espncdn.com/i/teamlogos/soccer/500/382.png), linear-gradient(135deg, #6cabdd 0%, #1c2c5b 100%)')">
+            <div class="card" onclick="openShirt('قميص إيرلينغ هالاند #9', 'مانشستر سيتي 🩵⚪', 55, 'image_cd1d9c29.jpg', 'p-haaland.png', 'القميص السماوي لبطل إنجلترا مانشستر سيتي باسم الهداف هالاند.', 'club', 'https://a.espncdn.com/i/teamlogos/soccer/500/382.png', 'linear-gradient(135deg, #6cabdd 0%, #1c2c5b 100%)')">
                 <div class="card-img"><img src="image_cd1d9c29.jpg" alt="هالاند"></div>
                 <div class="card-body">
                     <span class="team-tag">مانشستر سيتي 🩵⚪</span>
@@ -331,7 +329,7 @@
                 </div>
             </div>
 
-            <div class="card" onclick="openShirt('قميص واين روني #10', 'مانشستر يونايتد 🔴⚫', 50, 'image_14c5bf93.jpg', 'p-rooney.png', 'قميص الشياطين الحمر الكلاسيكي للأسطورة واين روني بسعر خاص.', 'url(https://a.espncdn.com/i/teamlogos/soccer/500/360.png), linear-gradient(135deg, #da291c 0%, #fbe122 50%, #000000 100%)')">
+            <div class="card" onclick="openShirt('قميص واين روني #10', 'مانشستر يونايتد 🔴⚫', 50, 'image_14c5bf93.jpg', 'p-rooney.png', 'قميص الشياطين الحمر الكلاسيكي للأسطورة واين روني بسعر خاص.', 'club', 'https://a.espncdn.com/i/teamlogos/soccer/500/360.png', 'linear-gradient(135deg, #da291c 0%, #fbe122 50%, #000000 100%)')">
                 <div class="card-img"><img src="image_14c5bf93.jpg" alt="روني"></div>
                 <div class="card-body">
                     <span class="team-tag">مانشستر يونايتد 🔴⚫</span>
@@ -393,7 +391,7 @@
         const MY_EMAIL = "yourname@gmail.com";
         let activePrice = 0, activeName = "", activeTeam = "";
 
-        function openShirt(name, team, price, img, playerImg, desc, bgImage) {
+        function openShirt(name, team, price, img, playerImg, desc, type, logoOrFlag, clubGradient) {
             activeName = name; activeTeam = team; activePrice = price;
             document.getElementById("mImg").src = img;
             const playerEl = document.getElementById("mPlayer");
@@ -402,10 +400,20 @@
             document.getElementById("mTeam").innerText = team;
             document.getElementById("mTitle").innerText = name;
             document.getElementById("mDesc").innerText = desc;
+            
             const bgEl = document.getElementById("modalBg");
-            bgEl.style.background = bgImage;
-            bgEl.style.backgroundSize = bgImage.includes("espn") ? "240px, cover" : "cover";
-            bgEl.style.backgroundPosition = bgImage.includes("espn") ? "25% center, center" : "center";
+            if (type === "flag") {
+                bgEl.style.backgroundImage = `url('${logoOrFlag}')`;
+                bgEl.style.backgroundSize = "cover";
+                bgEl.style.backgroundPosition = "center";
+                bgEl.style.backgroundRepeat = "no-repeat";
+            } else {
+                bgEl.style.backgroundImage = `url('${logoOrFlag}'), ${clubGradient}`;
+                bgEl.style.backgroundSize = "260px, cover";
+                bgEl.style.backgroundPosition = "22% center, center";
+                bgEl.style.backgroundRepeat = "no-repeat, no-repeat";
+            }
+
             calcTotal();
             document.getElementById("shirtModal").style.display = "flex";
         }
