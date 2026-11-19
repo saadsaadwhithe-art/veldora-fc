@@ -7,27 +7,17 @@
     <meta name="description" content="متجر Veldora FC لأحدث قمصان وأطقم كرة القدم للمنتخبات والأندية العالمية بأثمنة مناسبة وتوصيل لجميع المدن.">
     <meta name="keywords" content="Veldora FC, veldora-fc, قمصان كرة القدم, أطقم رياضية, مبابي, ميسي, رونالدو, حكيمي">
     <meta name="robots" content="index, follow">
-    
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@500;700;900&display=swap" rel="stylesheet">
-
     <style>
         :root {
             --primary-green: #059669;
             --bright-blue: #0284c7;
-            --gold-accent: #f59e0b;
             --bg-light: #f0f9ff;
             --card-white: #ffffff;
             --text-dark: #0f172a;
             --text-muted: #475569;
         }
-
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            font-family: 'Cairo', sans-serif;
-        }
-
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
         body {
             background-color: var(--bg-light);
             color: var(--text-dark);
@@ -37,7 +27,6 @@
                 radial-gradient(circle at 50% 90%, rgba(245, 158, 11, 0.15) 0%, transparent 50%);
             min-height: 100vh;
         }
-
         header {
             background: #ffffff;
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
@@ -50,27 +39,10 @@
             top: 0;
             z-index: 100;
         }
-
-        .logo {
-            font-size: 1.9rem;
-            font-weight: 900;
-            color: var(--primary-green);
-            letter-spacing: 1px;
-        }
-
+        .logo { font-size: 1.9rem; font-weight: 900; color: var(--primary-green); letter-spacing: 1px; }
         .logo span { color: var(--bright-blue); }
-
-        .nav-links a {
-            color: var(--text-dark);
-            text-decoration: none;
-            margin-right: 20px;
-            font-weight: 700;
-            font-size: 1.05rem;
-            transition: color 0.2s;
-        }
-
+        .nav-links a { color: var(--text-dark); text-decoration: none; margin-right: 20px; font-weight: 700; font-size: 1.05rem; }
         .nav-links a:hover { color: var(--primary-green); }
-
         .hero {
             text-align: center;
             padding: 55px 20px;
@@ -80,20 +52,8 @@
             border-bottom-right-radius: 30px;
             box-shadow: 0 10px 25px rgba(2, 132, 199, 0.2);
         }
-
-        .hero h1 {
-            font-size: 2.6rem;
-            font-weight: 900;
-            margin-bottom: 10px;
-        }
-
-        .hero p {
-            font-size: 1.15rem;
-            max-width: 680px;
-            margin: 0 auto 20px;
-            opacity: 0.95;
-        }
-
+        .hero h1 { font-size: 2.6rem; font-weight: 900; margin-bottom: 10px; }
+        .hero p { font-size: 1.15rem; max-width: 680px; margin: 0 auto 20px; opacity: 0.95; }
         .delivery-badge {
             display: inline-block;
             background: #ffffff;
@@ -104,13 +64,7 @@
             font-size: 1rem;
             box-shadow: 0 5px 15px rgba(0,0,0,0.15);
         }
-
-        .container {
-            max-width: 1200px;
-            margin: 30px auto;
-            padding: 0 20px;
-        }
-
+        .container { max-width: 1200px; margin: 30px auto; padding: 0 20px; }
         .section-title {
             font-size: 1.8rem;
             font-weight: 900;
@@ -119,13 +73,7 @@
             padding-right: 15px;
             border-right: 6px solid var(--primary-green);
         }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-            gap: 25px;
-        }
-
+        .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 25px; }
         .card {
             background: var(--card-white);
             border-radius: 18px;
@@ -135,38 +83,11 @@
             cursor: pointer;
             transition: all 0.3s ease;
         }
-
-        .card:hover {
-            transform: translateY(-8px);
-            border-color: var(--primary-green);
-            box-shadow: 0 15px 30px rgba(5, 150, 105, 0.2);
-        }
-
-        .card-img {
-            width: 100%;
-            height: 250px;
-            background: #f8fafc;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 10px;
-        }
-
-        .card-img img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-            transition: transform 0.3s ease;
-        }
-
+        .card:hover { transform: translateY(-8px); border-color: var(--primary-green); box-shadow: 0 15px 30px rgba(5, 150, 105, 0.2); }
+        .card-img { width: 100%; height: 250px; background: #f8fafc; display: flex; align-items: center; justify-content: center; padding: 10px; }
+        .card-img img { width: 100%; height: 100%; object-fit: contain; transition: transform 0.3s ease; }
         .card:hover .card-img img { transform: scale(1.07); }
-
-        .card-body {
-            padding: 18px;
-            text-align: center;
-            border-top: 1px solid #f1f5f9;
-        }
-
+        .card-body { padding: 18px; text-align: center; border-top: 1px solid #f1f5f9; }
         .team-tag {
             display: inline-block;
             background: #e0f2fe;
@@ -177,21 +98,8 @@
             border-radius: 20px;
             margin-bottom: 8px;
         }
-
-        .card-title {
-            font-size: 1.2rem;
-            font-weight: 800;
-            color: var(--text-dark);
-            margin-bottom: 6px;
-        }
-
-        .card-price {
-            font-size: 1.35rem;
-            font-weight: 900;
-            color: var(--primary-green);
-            margin-bottom: 10px;
-        }
-
+        .card-title { font-size: 1.2rem; font-weight: 800; color: var(--text-dark); margin-bottom: 6px; }
+        .card-price { font-size: 1.35rem; font-weight: 900; color: var(--primary-green); margin-bottom: 10px; }
         .btn-view {
             display: block;
             width: 100%;
@@ -204,7 +112,6 @@
             font-size: 0.95rem;
             cursor: pointer;
         }
-
         .modal-overlay {
             display: none;
             position: fixed;
@@ -216,7 +123,6 @@
             justify-content: center;
             padding: 15px;
         }
-
         .modal-box {
             width: 100%;
             max-width: 960px;
@@ -227,12 +133,7 @@
             animation: zoomIn 0.25s ease;
             border: 4px solid #ffffff;
         }
-
-        @keyframes zoomIn {
-            from { transform: scale(0.92); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-
+        @keyframes zoomIn { from { transform: scale(0.92); opacity: 0; } to { transform: scale(1); opacity: 1; } }
         .modal-bg {
             padding: 30px;
             display: grid;
@@ -241,22 +142,16 @@
             align-items: center;
             position: relative;
         }
-
         .bg-vibrant-layer {
             position: absolute;
             inset: 0;
             background-size: cover !important;
             background-position: center !important;
             background-repeat: no-repeat !important;
-            filter: saturate(1.55) contrast(1.12);
+            filter: saturate(1.65) contrast(1.15);
             z-index: 0;
         }
-
-        .modal-layer {
-            position: relative;
-            z-index: 1;
-        }
-
+        .modal-layer { position: relative; z-index: 1; }
         .close-btn {
             position: absolute;
             top: 15px;
@@ -273,7 +168,6 @@
             cursor: pointer;
             box-shadow: 0 4px 10px rgba(0,0,0,0.4);
         }
-
         .showcase-stage {
             display: flex;
             align-items: flex-end;
@@ -285,7 +179,6 @@
             min-height: 340px;
             overflow: hidden;
         }
-
         .shirt-preview {
             width: 52%;
             max-height: 270px;
@@ -295,4 +188,245 @@
             padding: 10px;
             margin-bottom: 20px;
             border: 3px solid #ffffff;
-            box-shadow:
+            box-shadow: 0 14px 30px rgba(0,0,0,0.55);
+        }
+        .player-pose {
+            width: 48%;
+            max-height: 320px;
+            object-fit: contain;
+            filter: drop-shadow(0 12px 20px rgba(0,0,0,0.75));
+        }
+        .modal-info {
+            background: rgba(255, 255, 255, 0.96);
+            padding: 22px;
+            border-radius: 18px;
+            color: var(--text-dark);
+            box-shadow: 0 14px 35px rgba(0,0,0,0.45);
+        }
+        .modal-info h3 { font-size: 1.65rem; font-weight: 900; color: var(--text-dark); margin-bottom: 5px; }
+        .modal-info p { color: var(--text-muted); font-size: 0.95rem; margin-bottom: 12px; font-weight: 600; }
+        .control-group { margin-bottom: 10px; }
+        .control-group label { display: block; font-weight: 800; font-size: 0.88rem; margin-bottom: 3px; }
+        .control-group select {
+            width: 100%;
+            padding: 8px 10px;
+            border-radius: 10px;
+            border: 2px solid #cbd5e1;
+            background: #ffffff;
+            font-size: 0.95rem;
+            font-weight: 700;
+        }
+        .bill-box { background: #f1f5f9; border-radius: 12px; padding: 10px 14px; margin: 12px 0; }
+        .bill-row { display: flex; justify-content: space-between; font-weight: 700; font-size: 0.92rem; margin-bottom: 4px; }
+        .bill-total {
+            display: flex;
+            justify-content: space-between;
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: var(--primary-green);
+            border-top: 2px dashed #cbd5e1;
+            padding-top: 6px;
+            margin-top: 4px;
+        }
+        .order-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+        .btn-wa { background: #25D366; color: #fff; border: none; padding: 11px; border-radius: 10px; font-weight: 800; font-size: 0.95rem; cursor: pointer; }
+        .btn-gm { background: #EA4335; color: #fff; border: none; padding: 11px; border-radius: 10px; font-weight: 800; font-size: 0.95rem; cursor: pointer; }
+        @media (max-width: 780px) {
+            .modal-bg { grid-template-columns: 1fr; max-height: 92vh; overflow-y: auto; }
+            .showcase-stage { min-height: 240px; }
+            .shirt-preview { max-height: 180px; }
+            .player-pose { max-height: 220px; }
+        }
+        footer { text-align: center; padding: 30px; background: #ffffff; border-top: 2px solid #e2e8f0; margin-top: 60px; font-weight: 700; color: var(--text-muted); }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">VELDORA <span>FC</span></div>
+        <nav class="nav-links">
+            <a href="#countries">قمصان المنتخبات</a>
+            <a href="#clubs">قمصان الأندية</a>
+        </nav>
+    </header>
+
+    <section class="hero">
+        <h1>متجر Veldora FC لأطقم كرة القدم</h1>
+        <p>اكتشف أروع قمصان المنتخبات والأندية العالمية بتصاميم عصرية وأثمنة مناسبة للجميع.</p>
+        <div class="delivery-badge">⚽ أثمنة القمصان من 50 إلى 70 درهم | 🚚 التوصيل للمدن البعيدة بـ 50 درهم</div>
+    </section>
+
+    <main class="container">
+        <h2 class="section-title" id="countries">🌍 قسم قمصان المنتخبات الوطنية</h2>
+        <div class="grid">
+            <div class="card" onclick="openShirt('قميص كيليان مبابي #10', 'منتخب فرنسا 🇫🇷', 65, 'image_ec22e2ac.jpg', 'p-mbappe.png', 'القميص الأزرق الرسمي للمنتخب الفرنسي بطباعة اسم ورقم كيليان مبابي 10.', 'url(https://flagcdn.com/w1280/fr.png)')">
+                <div class="card-img"><img src="image_ec22e2ac.jpg" alt="مبابي"></div>
+                <div class="card-body">
+                    <span class="team-tag">منتخب فرنسا 🇫🇷</span>
+                    <h3 class="card-title">قميص كيليان مبابي #10</h3>
+                    <div class="card-price">65 درهم</div>
+                    <button class="btn-view">عرض التفاصيل والطلب</button>
+                </div>
+            </div>
+
+            <div class="card" onclick="openShirt('قميص نيمار جونيور #10', 'منتخب البرازيل 🇧🇷', 60, 'image_239d5c62.jpg', 'p-neymar.png', 'قميص السيليساو البرازيلي الأصفر التاريخي باسم ورقم نيمار 10.', 'url(https://flagcdn.com/w1280/br.png)')">
+                <div class="card-img"><img src="image_239d5c62.jpg" alt="نيمار"></div>
+                <div class="card-body">
+                    <span class="team-tag">منتخب البرازيل 🇧🇷</span>
+                    <h3 class="card-title">قميص نيمار جونيور #10</h3>
+                    <div class="card-price">60 درهم</div>
+                    <button class="btn-view">عرض التفاصيل والطلب</button>
+                </div>
+            </div>
+
+            <div class="card" onclick="openShirt('قميص ليونيل ميسي #10', 'منتخب الأرجنتين 🇦🇷', 70, 'image_af0509a8.jpg', 'p-messi.png', 'قميص أبطال العالم الأرجنتين بخطوطه السماوية والبيضاء واسم الأسطورة ميسي.', 'url(https://flagcdn.com/w1280/ar.png)')">
+                <div class="card-img"><img src="image_af0509a8.jpg" alt="ميسي"></div>
+                <div class="card-body">
+                    <span class="team-tag">منتخب الأرجنتين 🇦🇷</span>
+                    <h3 class="card-title">قميص ليونيل ميسي #10</h3>
+                    <div class="card-price">70 درهم</div>
+                    <button class="btn-view">عرض التفاصيل والطلب</button>
+                </div>
+            </div>
+
+            <div class="card" onclick="openShirt('قميص كريستيانو رونالدو #7', 'منتخب البرتغال 🇵🇹', 70, 'image_2bb70508.jpg', 'p-ronaldo.png', 'القميص العنابي والأخضر للمنتخب البرتغالي برقم 7 الخاص بكريستيانو رونالدو.', 'url(https://flagcdn.com/w1280/pt.png)')">
+                <div class="card-img"><img src="image_2bb70508.jpg" alt="رونالدو"></div>
+                <div class="card-body">
+                    <span class="team-tag">منتخب البرتغال 🇵🇹</span>
+                    <h3 class="card-title">قميص كريستيانو رونالدو #7</h3>
+                    <div class="card-price">70 درهم</div>
+                    <button class="btn-view">عرض التفاصيل والطلب</button>
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title" id="clubs">🏆 قسم قمصان الأندية العالمية</h2>
+        <div class="grid">
+            <div class="card" onclick="openShirt('قميص زلاتان إبراهيموفيتش #9', 'نادي برشلونة 🔵🔴', 65, 'image_7db5a9a0.jpg', 'p-ibra.png', 'قميص البلوغرانا الكلاسيكي لنادي برشلونة باسم النجم زلاتان إبراهيموفيتش.', 'url(https://upload.wikimedia.org/wikipedia/en/thumb/4/47/FC_Barcelona_%28crest%29.svg/800px-FC_Barcelona_%28crest%29.svg.png)')">
+                <div class="card-img"><img src="image_7db5a9a0.jpg" alt="إبراهيموفيتش"></div>
+                <div class="card-body">
+                    <span class="team-tag">نادي برشلونة 🔵🔴</span>
+                    <h3 class="card-title">قميص إبراهيموفيتش #9</h3>
+                    <div class="card-price">65 درهم</div>
+                    <button class="btn-view">عرض التفاصيل والطلب</button>
+                </div>
+            </div>
+
+            <div class="card" onclick="openShirt('قميص أشرف حكيمي #2', 'باريس سان جيرمان 🔵🔴', 60, 'image_96461500.jpg', 'p-hakimi.png', 'قميص النادي الباريسي بالخط الأحمر والأبيض باسم النجم المغربي أشرف حكيمي.', 'url(https://upload.wikimedia.org/wikipedia/en/thumb/a/a7/Paris_Saint-Germain_F.C..svg/800px-Paris_Saint-Germain_F.C..svg.png)')">
+                <div class="card-img"><img src="image_96461500.jpg" alt="حكيمي"></div>
+                <div class="card-body">
+                    <span class="team-tag">باريس سان جيرمان 🔵🔴</span>
+                    <h3 class="card-title">قميص أشرف حكيمي #2</h3>
+                    <div class="card-price">60 درهم</div>
+                    <button class="btn-view">عرض التفاصيل والطلب</button>
+                </div>
+            </div>
+
+            <div class="card" onclick="openShirt('قميص إيرلينغ هالاند #9', 'مانشستر سيتي 🩵⚪', 55, 'image_cd1d9c29.jpg', 'p-haaland.png', 'القميص السماوي لبطل إنجلترا مانشستر سيتي باسم الهداف هالاند.', 'url(https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/800px-Manchester_City_FC_badge.svg.png)')">
+                <div class="card-img"><img src="image_cd1d9c29.jpg" alt="هالاند"></div>
+                <div class="card-body">
+                    <span class="team-tag">مانشستر سيتي 🩵⚪</span>
+                    <h3 class="card-title">قميص إيرلينغ هالاند #9</h3>
+                    <div class="card-price">55 درهم</div>
+                    <button class="btn-view">عرض التفاصيل والطلب</button>
+                </div>
+            </div>
+
+            <div class="card" onclick="openShirt('قميص واين روني #10', 'مانشستر يونايتد 🔴⚫', 50, 'image_14c5bf93.jpg', 'p-rooney.png', 'قميص الشياطين الحمر الكلاسيكي للأسطورة واين روني بسعر خاص.', 'url(https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/800px-Manchester_United_FC_crest.svg.png)')">
+                <div class="card-img"><img src="image_14c5bf93.jpg" alt="روني"></div>
+                <div class="card-body">
+                    <span class="team-tag">مانشستر يونايتد 🔴⚫</span>
+                    <h3 class="card-title">قميص واين روني #10</h3>
+                    <div class="card-price">50 درهم</div>
+                    <button class="btn-view">عرض التفاصيل والطلب</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="modal-overlay" id="shirtModal" onclick="closeModal(event)">
+        <div class="modal-box" onclick="event.stopPropagation()">
+            <button class="close-btn" onclick="forceClose()">✕</button>
+            <div class="modal-bg">
+                <div class="bg-vibrant-layer" id="modalBg"></div>
+                <div class="modal-layer showcase-stage">
+                    <img id="mImg" src="" alt="القميص" class="shirt-preview">
+                    <img id="mPlayer" src="" alt="اللاعب" class="player-pose" onerror="this.style.display='none'">
+                </div>
+                <div class="modal-layer modal-info">
+                    <span class="team-tag" id="mTeam"></span>
+                    <h3 id="mTitle"></h3>
+                    <p id="mDesc"></p>
+                    <div class="control-group">
+                        <label>اختر المقاس:</label>
+                        <select id="mSize">
+                            <option value="S">S (صغير)</option>
+                            <option value="M" selected>M (متوسط)</option>
+                            <option value="L">L (كبير)</option>
+                            <option value="XL">XL (كبير جداً)</option>
+                        </select>
+                    </div>
+                    <div class="control-group">
+                        <label>اختر التوصيل:</label>
+                        <select id="mShip" onchange="calcTotal()">
+                            <option value="0">استلام قريب / محلي (0 درهم)</option>
+                            <option value="50" selected>توصيل لمدينة بعيدة (+50 درهم)</option>
+                        </select>
+                    </div>
+                    <div class="bill-box">
+                        <div class="bill-row"><span>ثمن القميص:</span> <span id="pBase">0 درهم</span></div>
+                        <div class="bill-row"><span>تكلفة التوصيل:</span> <span id="pShip">50 درهم</span></div>
+                        <div class="bill-total"><span>المجموع الكلي:</span> <span id="pTotal">0 درهم</span></div>
+                    </div>
+                    <div class="order-btns">
+                        <button class="btn-wa" onclick="sendWA()">📱 اطلب عبر واتساب</button>
+                        <button class="btn-gm" onclick="sendGM()">✉️ اطلب عبر Gmail</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>جميع الحقوق محفوظة &copy; 2026 متجر <strong>Veldora FC</strong></footer>
+
+    <script>
+        const MY_PHONE = "212600000000";
+        const MY_EMAIL = "yourname@gmail.com";
+        let activePrice = 0, activeName = "", activeTeam = "";
+
+        function openShirt(name, team, price, img, playerImg, desc, bgImage) {
+            activeName = name; activeTeam = team; activePrice = price;
+            document.getElementById("mImg").src = img;
+            const playerEl = document.getElementById("mPlayer");
+            playerEl.style.display = "block";
+            playerEl.src = playerImg;
+            document.getElementById("mTeam").innerText = team;
+            document.getElementById("mTitle").innerText = name;
+            document.getElementById("mDesc").innerText = desc;
+            document.getElementById("modalBg").style.backgroundImage = bgImage;
+            calcTotal();
+            document.getElementById("shirtModal").style.display = "flex";
+        }
+        function calcTotal() {
+            const ship = parseInt(document.getElementById("mShip").value);
+            document.getElementById("pBase").innerText = activePrice + " درهم";
+            document.getElementById("pShip").innerText = ship + " درهم";
+            document.getElementById("pTotal").innerText = (activePrice + ship) + " درهم";
+        }
+        function forceClose() { document.getElementById("shirtModal").style.display = "none"; }
+        function closeModal(e) { if (e.target.id === "shirtModal") forceClose(); }
+        function sendWA() {
+            const size = document.getElementById("mSize").value;
+            const ship = parseInt(document.getElementById("mShip").value);
+            const text = `مرحباً متجر Veldora FC 👋\nأريد طلب:\n- القميص: ${activeName} (${activeTeam})\n- المقاس: ${size}\n- الثمن: ${activePrice} درهم\n- التوصيل: ${ship} درهم\n- المجموع: ${activePrice + ship} درهم`;
+            window.open(`https://wa.me/${MY_PHONE}?text=${encodeURIComponent(text)}`, "_blank");
+        }
+        function sendGM() {
+            const size = document.getElementById("mSize").value;
+            const ship = parseInt(document.getElementById("mShip").value);
+            const sub = `طلب جديد: ${activeName}`;
+            const body = `مرحباً Veldora FC،\n\nأرغب في طلب:\n- القميص: ${activeName} (${activeTeam})\n- المقاس: ${size}\n- الثمن: ${activePrice} درهم\n- التوصيل: ${ship} درهم\n- المجموع: ${activePrice + ship} درهم\n\nالاسم:\nالمدينة:\nالهاتف:`;
+            window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${MY_EMAIL}&su=${encodeURIComponent(sub)}&body=${encodeURIComponent(body)}`, "_blank");
+        }
+    </script>
+</body>
+</html>
