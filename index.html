@@ -67,7 +67,7 @@
             box-shadow: 0 10px 25px rgba(2, 132, 199, 0.2);
         }
         .hero h1 { font-size: 2.6rem; font-weight: 900; margin-bottom: 10px; }
-        .hero p { font-size: 1.15rem; max-width: 680px; margin: 0 auto 20px; opacity: 0.95; }
+        .hero p { font-size: 1.15rem; max-width: 720px; margin: 0 auto 20px; opacity: 0.95; }
         .delivery-badge {
             display: inline-block;
             background: #ffffff;
@@ -259,9 +259,16 @@
             padding-top: 6px;
             margin-top: 4px;
         }
-        .order-btns { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-        .btn-wa { background: #25D366; color: #fff; border: none; padding: 11px; border-radius: 10px; font-weight: 800; font-size: 0.95rem; cursor: pointer; }
-        .btn-gm { background: #EA4335; color: #fff; border: none; padding: 11px; border-radius: 10px; font-weight: 800; font-size: 0.95rem; cursor: pointer; }
+        .order-btns { display: grid; grid-template-columns: 1fr; gap: 10px; }
+        .btn-gm { background: #EA4335; color: #fff; border: none; padding: 12px; border-radius: 10px; font-weight: 800; font-size: 0.98rem; cursor: pointer; }
+        .modal-buyer-note {
+            margin-top: 10px;
+            font-size: 0.84rem;
+            color: var(--text-muted);
+            font-weight: 700;
+            text-align: center;
+            line-height: 1.6;
+        }
         @media (max-width: 780px) {
             .modal-bg { grid-template-columns: 1fr; max-height: 92vh; overflow-y: auto; }
             .showcase-stage { min-height: 245px; }
@@ -269,7 +276,26 @@
             .shirt-preview { max-height: 175px; }
             .player-pose { max-height: 215px; }
         }
-        footer { text-align: center; padding: 30px; background: #ffffff; border-top: 2px solid #e2e8f0; margin-top: 60px; font-weight: 700; color: var(--text-muted); }
+        footer {
+            text-align: center;
+            padding: 34px 20px;
+            background: #ffffff;
+            border-top: 2px solid #e2e8f0;
+            margin-top: 60px;
+            font-weight: 700;
+            color: var(--text-muted);
+        }
+        .footer-big-notice {
+            max-width: 940px;
+            margin: 16px auto 0;
+            font-size: 1.38rem;
+            font-weight: 900;
+            line-height: 1.8;
+            color: var(--text-dark);
+        }
+        @media (max-width: 780px) {
+            .footer-big-notice { font-size: 1.12rem; }
+        }
     </style>
 </head>
 <body>
@@ -283,14 +309,14 @@
 
     <section class="hero">
         <h1>متجر Veldora FC لأطقم كرة القدم</h1>
-        <p>قمصان رياضية (نسخ اقتصادية عالية الجودة) للمنتخبات والأندية العالمية بأثمنة مناسبة للجميع.</p>
+        <p>قمصان رياضية (نسخ منسوخة ومصنّعة بأسعار اقتصادية) للمنتخبات والأندية العالمية، مع إمكانية الدفع عند الاستلام وطلب صور أو فيديو للقميص قبل التأكيد.</p>
         <div class="delivery-badge">⚽ القمصان من 45 إلى 65 درهم | 🚚 التوصيل: النواحي 40 درهم • الدار البيضاء 70 درهم • وجدة 100 درهم</div>
     </section>
 
     <main class="container">
         <h2 class="section-title" id="countries">🌍 قسم قمصان المنتخبات الوطنية</h2>
         <div class="grid">
-            <div class="card" onclick="openShirt('قميص كيليان مبابي #10', 'منتخب فرنسا 🇫🇷', 60, 'image_ec22e2ac.jpg', 'p-mbappe.png', 'قميص المنتخب الفرنسي (نسخة اقتصادية) بطباعة اسم ورقم كيليان مبابي 10.', 'flag', 'https://flagcdn.com/w1280/fr.png')">
+            <div class="card" onclick="openShirt('قميص كيليان مبابي #10', 'منتخب فرنسا 🇫🇷', 60, 'image_ec22e2ac.jpg', 'p-mbappe.png', 'قميص المنتخب الفرنسي (نسخة منسوخة/اقتصادية) بطباعة اسم ورقم كيليان مبابي 10.', 'flag', 'https://flagcdn.com/w1280/fr.png')">
                 <div class="card-img"><img src="image_ec22e2ac.jpg" alt="قميص كيليان مبابي 10 منتخب فرنسا - متجر Veldora FC"></div>
                 <div class="card-body">
                     <span class="team-tag">منتخب فرنسا 🇫🇷</span>
@@ -300,7 +326,7 @@
                 </div>
             </div>
 
-            <div class="card" onclick="openShirt('قميص نيمار جونيور #10', 'منتخب البرازيل 🇧🇷', 55, 'image_239d5c62.jpg', 'p-neymar.png', 'قميص السيليساو البرازيلي الأصفر (نسخة اقتصادية) باسم ورقم نيمار 10.', 'flag', 'https://flagcdn.com/w1280/br.png')">
+            <div class="card" onclick="openShirt('قميص نيمار جونيور #10', 'منتخب البرازيل 🇧🇷', 55, 'image_239d5c62.jpg', 'p-neymar.png', 'قميص السيليساو البرازيلي الأصفر (نسخة منسوخة/اقتصادية) باسم ورقم نيمار 10.', 'flag', 'https://flagcdn.com/w1280/br.png')">
                 <div class="card-img"><img src="image_239d5c62.jpg" alt="قميص نيمار جونيور 10 منتخب البرازيل - متجر Veldora FC"></div>
                 <div class="card-body">
                     <span class="team-tag">منتخب البرازيل 🇧🇷</span>
@@ -310,7 +336,7 @@
                 </div>
             </div>
 
-            <div class="card" onclick="openShirt('قميص ليونيل ميسي #10', 'منتخب الأرجنتين 🇦🇷', 65, 'image_af0509a8.jpg', 'p-messi.png', 'قميص الأرجنتين بخطوطه السماوية والبيضاء (نسخة اقتصادية) واسم الأسطورة ميسي.', 'flag', 'https://flagcdn.com/w1280/ar.png')">
+            <div class="card" onclick="openShirt('قميص ليونيل ميسي #10', 'منتخب الأرجنتين 🇦🇷', 65, 'image_af0509a8.jpg', 'p-messi.png', 'قميص الأرجنتين بخطوطه السماوية والبيضاء (نسخة منسوخة/اقتصادية) واسم الأسطورة ميسي.', 'flag', 'https://flagcdn.com/w1280/ar.png')">
                 <div class="card-img"><img src="image_af0509a8.jpg" alt="قميص ليونيل ميسي 10 منتخب الأرجنتين - متجر Veldora FC"></div>
                 <div class="card-body">
                     <span class="team-tag">منتخب الأرجنتين 🇦🇷</span>
@@ -320,7 +346,7 @@
                 </div>
             </div>
 
-            <div class="card" onclick="openShirt('قميص كريستيانو رونالدو #7', 'منتخب البرتغال 🇵🇹', 65, 'image_2bb70508.jpg', 'p-ronaldo.png', 'القميص العنابي والأخضر للمنتخب البرتغالي (نسخة اقتصادية) برقم 7 الخاص بكريستيانو رونالدو.', 'flag', 'https://flagcdn.com/w1280/pt.png')">
+            <div class="card" onclick="openShirt('قميص كريستيانو رونالدو #7', 'منتخب البرتغال 🇵🇹', 65, 'image_2bb70508.jpg', 'p-ronaldo.png', 'القميص العنابي والأخضر للمنتخب البرتغالي (نسخة منسوخة/اقتصادية) برقم 7 الخاص بكريستيانو رونالدو.', 'flag', 'https://flagcdn.com/w1280/pt.png')">
                 <div class="card-img"><img src="image_2bb70508.jpg" alt="قميص كريستيانو رونالدو 7 منتخب البرتغال - متجر Veldora FC"></div>
                 <div class="card-body">
                     <span class="team-tag">منتخب البرتغال 🇵🇹</span>
@@ -333,7 +359,7 @@
 
         <h2 class="section-title" id="clubs">🏆 قسم قمصان الأندية العالمية</h2>
         <div class="grid">
-            <div class="card" onclick="openShirt('قميص زلاتان إبراهيموفيتش #9', 'نادي برشلونة 🔵🔴', 55, 'image_7db5a9a0.jpg', 'p-ibra.png', 'قميص البلوغرانا الكلاسيكي لنادي برشلونة (نسخة اقتصادية) باسم النجم زلاتان إبراهيموفيتش.', 'club', 'https://a.espncdn.com/i/teamlogos/soccer/500/83.png', 'repeating-linear-gradient(90deg, #004d98 0px, #004d98 80px, #a50044 80px, #a50044 160px)')">
+            <div class="card" onclick="openShirt('قميص زلاتان إبراهيموفيتش #9', 'نادي برشلونة 🔵🔴', 55, 'image_7db5a9a0.jpg', 'p-ibra.png', 'قميص البلوغرانا الكلاسيكي لنادي برشلونة (نسخة منسوخة/اقتصادية) باسم النجم زلاتان إبراهيموفيتش.', 'club', 'https://a.espncdn.com/i/teamlogos/soccer/500/83.png', 'repeating-linear-gradient(90deg, #004d98 0px, #004d98 80px, #a50044 80px, #a50044 160px)')">
                 <div class="card-img"><img src="image_7db5a9a0.jpg" alt="قميص زلاتان إبراهيموفيتش 9 نادي برشلونة - متجر Veldora FC"></div>
                 <div class="card-body">
                     <span class="team-tag">نادي برشلونة 🔵🔴</span>
@@ -343,7 +369,7 @@
                 </div>
             </div>
 
-            <div class="card" onclick="openShirt('قميص أشرف حكيمي #2', 'باريس سان جيرمان 🔵🔴', 55, 'image_96461500.jpg', 'p-hakimi.png', 'قميص النادي الباريسي بالخط الأحمر والأبيض (نسخة اقتصادية) باسم النجم المغربي أشرف حكيمي.', 'club', 'https://a.espncdn.com/i/teamlogos/soccer/500/160.png', 'linear-gradient(90deg, #004170 0%, #004170 42%, #ffffff 42%, #ffffff 45%, #da291c 45%, #da291c 55%, #ffffff 55%, #ffffff 58%, #004170 58%, #004170 100%)')">
+            <div class="card" onclick="openShirt('قميص أشرف حكيمي #2', 'باريس سان جيرمان 🔵🔴', 55, 'image_96461500.jpg', 'p-hakimi.png', 'قميص النادي الباريسي بالخط الأحمر والأبيض (نسخة منسوخة/اقتصادية) باسم النجم المغربي أشرف حكيمي.', 'club', 'https://a.espncdn.com/i/teamlogos/soccer/500/160.png', 'linear-gradient(90deg, #004170 0%, #004170 42%, #ffffff 42%, #ffffff 45%, #da291c 45%, #da291c 55%, #ffffff 55%, #ffffff 58%, #004170 58%, #004170 100%)')">
                 <div class="card-img"><img src="image_96461500.jpg" alt="قميص أشرف حكيمي 2 باريس سان جيرمان - متجر Veldora FC"></div>
                 <div class="card-body">
                     <span class="team-tag">باريس سان جيرمان 🔵🔴</span>
@@ -353,7 +379,7 @@
                 </div>
             </div>
 
-            <div class="card" onclick="openShirt('قميص إيرلينغ هالاند #9', 'مانشستر سيتي 🩵⚪', 50, 'image_cd1d9c29.jpg', 'p-haaland.png', 'القميص السماوي لمانشستر سيتي (نسخة اقتصادية) باسم الهداف هالاند.', 'club', 'https://a.espncdn.com/i/teamlogos/soccer/500/382.png', 'linear-gradient(135deg, #6cabdd 0%, #1c2c5b 100%)')">
+            <div class="card" onclick="openShirt('قميص إيرلينغ هالاند #9', 'مانشستر سيتي 🩵⚪', 50, 'image_cd1d9c29.jpg', 'p-haaland.png', 'القميص السماوي لمانشستر سيتي (نسخة منسوخة/اقتصادية) باسم الهداف هالاند.', 'club', 'https://a.espncdn.com/i/teamlogos/soccer/500/382.png', 'linear-gradient(135deg, #6cabdd 0%, #1c2c5b 100%)')">
                 <div class="card-img"><img src="image_cd1d9c29.jpg" alt="قميص إيرلينغ هالاند 9 مانشستر سيتي - متجر Veldora FC"></div>
                 <div class="card-body">
                     <span class="team-tag">مانشستر سيتي 🩵⚪</span>
@@ -363,7 +389,7 @@
                 </div>
             </div>
 
-            <div class="card" onclick="openShirt('قميص واين روني #10', 'مانشستر يونايتد 🔴⚫', 45, 'image_14c5bf93.jpg', 'p-rooney.png', 'قميص الشياطين الحمر الكلاسيكي للأسطورة واين روني (نسخة اقتصادية) بسعر خاص.', 'club', 'https://a.espncdn.com/i/teamlogos/soccer/500/360.png', 'linear-gradient(135deg, #da291c 0%, #fbe122 50%, #000000 100%)')">
+            <div class="card" onclick="openShirt('قميص واين روني #10', 'مانشستر يونايتد 🔴⚫', 45, 'image_14c5bf93.jpg', 'p-rooney.png', 'قميص الشياطين الحمر الكلاسيكي للأسطورة واين روني (نسخة منسوخة/اقتصادية) بسعر خاص.', 'club', 'https://a.espncdn.com/i/teamlogos/soccer/500/360.png', 'linear-gradient(135deg, #da291c 0%, #fbe122 50%, #000000 100%)')">
                 <div class="card-img"><img src="image_14c5bf93.jpg" alt="قميص واين روني 10 مانشستر يونايتد - متجر Veldora FC"></div>
                 <div class="card-body">
                     <span class="team-tag">مانشستر يونايتد 🔴⚫</span>
@@ -415,19 +441,25 @@
                         <div class="bill-total"><span>المجموع الكلي:</span> <span id="pTotal">0 درهم</span></div>
                     </div>
                     <div class="order-btns">
-                        <button class="btn-wa" onclick="sendWA()">📱 اطلب عبر واتساب</button>
                         <button class="btn-gm" onclick="sendGM()">✉️ اطلب عبر Gmail</button>
+                    </div>
+                    <div class="modal-buyer-note">
+                        تنبيه: الواتساب معطل حالياً، يُرجى الطلب عبر Gmail. الدفع عند الاستلام، ويمكنك طلب صور أو فيديو للقميص قبل تأكيد الطلب.
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer>جميع الحقوق محفوظة &copy; 2026 متجر <strong>Veldora FC</strong></footer>
+    <footer>
+        <div>جميع الحقوق محفوظة &copy; 2026 متجر <strong>Veldora FC</strong></div>
+        <div class="footer-big-notice">
+            تنويه واضح: جميع القمصان المعروضة هنا هي قمصان منسوخة ومصنّعة (ليست أصلية). كما أن الاستبدال والاسترجاع متوفر فقط في حال وجود دليل يثبت أن القميص به عيب صناعي أو مكروه بسببنا نحن.
+        </div>
+    </footer>
 
     <script>
-        const MY_PHONE = "212600000000";
-        const MY_EMAIL = "yourname@gmail.com";
+        const MY_EMAIL = "saadsaadwhithe@gmail.com";
         let activePrice = 0, activeName = "", activeTeam = "";
 
         function openShirt(name, team, price, img, playerImg, desc, type, logoOrFlag, clubGradient) {
@@ -476,15 +508,6 @@
         }
         function forceClose() { document.getElementById("shirtModal").style.display = "none"; }
         function closeModal(e) { if (e.target.id === "shirtModal") forceClose(); }
-        function sendWA() {
-            const size = document.getElementById("mSize").value;
-            const shirtPrice = getShirtFinalPrice();
-            const shipSelect = document.getElementById("mShip");
-            const ship = parseInt(shipSelect.value);
-            const zone = shipSelect.options[shipSelect.selectedIndex].getAttribute("data-zone");
-            const text = `مرحباً متجر Veldora FC 👋\nأريد طلب:\n- القميص: ${activeName} (${activeTeam})\n- المقاس: ${size}\n- ثمن القميص: ${shirtPrice} درهم\n- التوصيل (${zone}): ${ship} درهم\n- المجموع: ${shirtPrice + ship} درهم`;
-            window.open(`https://wa.me/${MY_PHONE}?text=${encodeURIComponent(text)}`, "_blank");
-        }
         function sendGM() {
             const size = document.getElementById("mSize").value;
             const shirtPrice = getShirtFinalPrice();
@@ -492,8 +515,8 @@
             const ship = parseInt(shipSelect.value);
             const zone = shipSelect.options[shipSelect.selectedIndex].getAttribute("data-zone");
             const sub = `طلب جديد: ${activeName}`;
-            const body = `مرحباً Veldora FC،\n\nأرغب في طلب:\n- القميص: ${activeName} (${activeTeam})\n- المقاس: ${size}\n- ثمن القميص: ${shirtPrice} درهم\n- التوصيل (${zone}): ${ship} درهم\n- المجموع: ${shirtPrice + ship} درهم\n\nالاسم:\nالمدينة:\nالهاتف:`;
-            window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${MY_EMAIL}&su=${encodeURIComponent(sub)}&body=${encodeURIComponent(body)}`, "_blank");
+            const body = `مرحباً Veldora FC (الواتساب معطل حالياً، تم الإرسال عبر Gmail)،\n\nأرغب في طلب:\n- القميص: ${activeName} (${activeTeam})\n- المقاس: ${size}\n- ثمن القميص: ${shirtPrice} درهم\n- التوصيل (${zone}): ${ship} درهم\n- المجموع: ${shirtPrice + ship} درهم\n\nالاسم:\nالمدينة:\nالهاتف:\nلماذا أريد هذا القميص:`;
+            window.open(`https://mail.google.com/mail/?view=cm&fs=1&to=${encodeURIComponent(MY_EMAIL)}&su=${encodeURIComponent(sub)}&body=${encodeURIComponent(body)}`, "_blank");
         }
     </script>
 </body>
