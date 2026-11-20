@@ -181,18 +181,38 @@
         }
         .showcase-stage {
             display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 12px;
+            background: transparent;
+            border-radius: 20px;
+            padding: 16px 15px 0 15px;
+            min-height: 350px;
+            overflow: hidden;
+        }
+        .club-crest-above {
+            display: none;
+            width: 86px;
+            height: 86px;
+            object-fit: contain;
+            background: rgba(255, 255, 255, 0.96);
+            border-radius: 50%;
+            padding: 8px;
+            border: 3px solid #ffffff;
+            box-shadow: 0 10px 24px rgba(0, 0, 0, 0.45);
+            z-index: 3;
+        }
+        .stage-items-row {
+            display: flex;
             align-items: flex-end;
             justify-content: center;
             gap: 15px;
-            background: transparent;
-            border-radius: 20px;
-            padding: 20px 15px 0 15px;
-            min-height: 340px;
-            overflow: hidden;
+            width: 100%;
         }
         .shirt-preview {
             width: 55%;
-            max-height: 270px;
+            max-height: 245px;
             object-fit: contain;
             background: #ffffff;
             border-radius: 14px;
@@ -203,7 +223,7 @@
         }
         .player-pose {
             width: 45%;
-            max-height: 320px;
+            max-height: 295px;
             object-fit: contain;
             filter: drop-shadow(0 12px 20px rgba(0,0,0,0.75));
         }
@@ -244,9 +264,10 @@
         .btn-gm { background: #EA4335; color: #fff; border: none; padding: 11px; border-radius: 10px; font-weight: 800; font-size: 0.95rem; cursor: pointer; }
         @media (max-width: 780px) {
             .modal-bg { grid-template-columns: 1fr; max-height: 92vh; overflow-y: auto; }
-            .showcase-stage { min-height: 240px; }
-            .shirt-preview { max-height: 180px; }
-            .player-pose { max-height: 220px; }
+            .showcase-stage { min-height: 245px; }
+            .club-crest-above { width: 70px; height: 70px; }
+            .shirt-preview { max-height: 175px; }
+            .player-pose { max-height: 215px; }
         }
         footer { text-align: center; padding: 30px; background: #ffffff; border-top: 2px solid #e2e8f0; margin-top: 60px; font-weight: 700; color: var(--text-muted); }
     </style>
@@ -360,8 +381,11 @@
             <div class="modal-bg">
                 <div class="bg-vibrant-layer" id="modalBg"></div>
                 <div class="modal-layer showcase-stage">
-                    <img id="mImg" src="" alt="صورة القميص المختار في متجر Veldora FC" class="shirt-preview">
-                    <img id="mPlayer" src="" alt="صورة اللاعب صاحب القميص" class="player-pose" onerror="this.style.display='none'">
+                    <img id="mClubBadge" src="" alt="شعار النادي" class="club-crest-above" onerror="this.style.display='none'">
+                    <div class="stage-items-row">
+                        <img id="mImg" src="" alt="صورة القميص المختار في متجر Veldora FC" class="shirt-preview">
+                        <img id="mPlayer" src="" alt="صورة اللاعب صاحب القميص" class="player-pose" onerror="this.style.display='none'">
+                    </div>
                 </div>
                 <div class="modal-layer modal-info">
                     <span class="team-tag" id="mTeam"></span>
@@ -417,16 +441,22 @@
             document.getElementById("mDesc").innerText = desc;
             
             const bgEl = document.getElementById("modalBg");
+            const clubBadgeEl = document.getElementById("mClubBadge");
+
             if (type === "flag") {
+                clubBadgeEl.style.display = "none";
+                clubBadgeEl.src = "";
                 bgEl.style.backgroundImage = `url('${logoOrFlag}')`;
                 bgEl.style.backgroundSize = "cover";
                 bgEl.style.backgroundPosition = "center";
                 bgEl.style.backgroundRepeat = "no-repeat";
             } else {
-                bgEl.style.backgroundImage = `url('${logoOrFlag}'), ${clubGradient}`;
-                bgEl.style.backgroundSize = "260px, cover";
-                bgEl.style.backgroundPosition = "22% center, center";
-                bgEl.style.backgroundRepeat = "no-repeat, no-repeat";
+                clubBadgeEl.style.display = "block";
+                clubBadgeEl.src = logoOrFlag;
+                bgEl.style.backgroundImage = clubGradient;
+                bgEl.style.backgroundSize = "cover";
+                bgEl.style.backgroundPosition = "center";
+                bgEl.style.backgroundRepeat = "no-repeat";
             }
 
             calcTotal();
